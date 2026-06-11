@@ -4,6 +4,10 @@ import Navbar from "@/components/Navbar";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { useMessages } from "@/hooks/useMessages";
 
 export default function Home() {
   return (
@@ -13,7 +17,9 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <Process />
+      <Projects />
       <Contact />
-    </main>
+      <Footer /> 
+    </main>   
   );
 }

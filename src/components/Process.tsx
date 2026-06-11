@@ -33,7 +33,10 @@ const steps: Step[] = [
 
 export default function Process() {
   return (
-    <section className="relative overflow-x-clip bg-zinc-950 py-16 text-white sm:py-24 lg:py-32">
+    <section
+      id="procesos"
+      className="relative overflow-hidden bg-zinc-950 py-20 text-white sm:py-24 lg:py-32"
+      >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 overflow-hidden"
