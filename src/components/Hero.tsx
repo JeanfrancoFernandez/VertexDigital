@@ -1,4 +1,8 @@
+"use client";
+
+import { useMessages } from "@/hooks/useMessages";
 export default function Hero() {
+  const messages = useMessages();
   return (
     <section className="relative overflow-x-clip bg-zinc-950 text-white">
       <div
@@ -14,22 +18,19 @@ export default function Hero() {
         <div className="grid min-w-0 items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="min-w-0 max-w-xl lg:max-w-none">
             <p className="mb-4 inline-block max-w-full rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur-sm sm:px-4 sm:text-sm">
-              Software · Automatización · IA
+            {messages.hero.badge}
             </p>
 
             <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-              Automatizamos procesos.{" "}
+            {messages.hero.title1}
               <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                Desarrollamos software.
+              {messages.hero.title2}
               </span>{" "}
-              Impulsamos tu negocio.
+                {messages.hero.title3}
             </h1>
 
             <p className="mt-6 text-lg leading-relaxed text-zinc-400 sm:text-xl">
-              En Vertex Digital creamos soluciones a medida: aplicaciones
-              robustas, flujos automatizados e inteligencia artificial que
-              reducen costos, eliminan tareas repetitivas y aceleran el
-              crecimiento de tu empresa.
+              {messages.hero.description}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
@@ -37,13 +38,13 @@ export default function Hero() {
                 href="#contacto"
                 className="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3.5 text-base font-semibold text-zinc-950 transition hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto sm:px-7"
               >
-                Solicitar Cotización
+                {messages.hero.primaryButton}
               </a>
               <a
                 href="#servicios"
                 className="inline-flex w-full items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:border-white/30 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto sm:px-7"
               >
-                Ver Servicios
+                {messages.hero.secondaryButton}
               </a>
             </div>
           </div>

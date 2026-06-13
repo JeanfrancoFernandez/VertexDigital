@@ -1,4 +1,8 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 export default function Navbar() {
+  const { language, setLanguage } = useLanguage();
   return (
     <nav className="w-full overflow-x-clip border-b border-gray-200">
       <div className="mx-auto flex min-w-0 max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6">
@@ -23,6 +27,31 @@ export default function Navbar() {
           <span className="sm:hidden">Cotizar</span>
           <span className="hidden sm:inline">Solicitar Cotización</span>
         </a>
+        <div className="flex items-center gap-2 text-sm font-semibold">
+  <button
+    onClick={() => setLanguage("es")}
+    className={
+      language === "es"
+        ? "text-violet-600"
+        : "text-zinc-500"
+    }
+  >
+    ES
+  </button>
+
+  <span className="text-zinc-300">|</span>
+
+  <button
+    onClick={() => setLanguage("en")}
+    className={
+      language === "en"
+        ? "text-violet-600"
+        : "text-zinc-500"
+    }
+  >
+    EN
+  </button>
+</div>
       </div>
     </nav>
   );

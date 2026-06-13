@@ -1,3 +1,6 @@
+"use client";
+
+import { useMessages } from "@/hooks/useMessages";
 type Service = {
   title: string;
   description: string;
@@ -32,20 +35,19 @@ const services: Service[] = [
 ];
 
 export default function Services() {
+  const messages = useMessages();
   return (
     <section id="servicios" className="overflow-x-clip bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-violet-600">
-            Nuestros servicios
+          {messages.services.badge}
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl">
-            Soluciones que impulsan tu crecimiento
+          {messages.services.title}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-zinc-600 sm:text-xl">
-            Ayudamos a empresas a optimizar procesos, aumentar productividad y
-            escalar mediante desarrollo de software, automatización e
-            inteligencia artificial.
+          {messages.services.description}
           </p>
         </div>
 
